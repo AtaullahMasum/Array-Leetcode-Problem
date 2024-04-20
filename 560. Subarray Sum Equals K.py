@@ -23,3 +23,18 @@ class Solution:
                 if sum == k:
                     cnt += 1
         return cnt
+# Optimal Solution 
+# Time Complexity is O(n)
+class Solution:
+    def subarraySum(self, nums: List[int], k: int) -> int:
+        cnt , preSum = 0, 0
+        hashMap = {}
+        hashMap[0] = 1
+        for num in nums:
+            preSum  += num
+            target = preSum - k
+            if target in hashMap:
+                 cnt += hashMap[target]
+            hashMap[preSum] = hashMap.get(preSum, 0)+ 1
+        return cnt
+          
