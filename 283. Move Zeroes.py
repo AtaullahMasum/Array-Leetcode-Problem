@@ -15,7 +15,7 @@ class Solution:
         remain = len(temp)
         for i in range(remain, len(nums)):
             nums[i] = 0
-# Optimal Solution
+# Optimal Solution Using Two Pointer 
 # Time Complexity is O(n)
 # Space Complexity is O(1)
 class Solution:
