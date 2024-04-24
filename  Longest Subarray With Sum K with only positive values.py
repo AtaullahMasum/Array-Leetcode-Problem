@@ -41,7 +41,7 @@ def longestSubarrayWithSumK(a: [int], k: int) -> int:
         if Sum not in hashMap:
             hashMap[Sum] = i
     return maxlen
-# Optimal Solution 
+# Optimal Solution Using Two Pointer and Sliding Window
 def longestSubarrayWithSumK(a: [int], k: int) -> int:
     # Write your code here
     Sum, left, right, maxlen = 0, 0, 0, 0
