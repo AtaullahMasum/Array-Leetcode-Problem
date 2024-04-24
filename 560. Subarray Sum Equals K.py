@@ -37,4 +37,21 @@ class Solution:
                  cnt += hashMap[target]
             hashMap[preSum] = hashMap.get(preSum, 0)+ 1
         return cnt
+# Optimal Solution 
+# Time Complexity is O(n)
+class Solution:
+    def subarraySum(self, nums: List[int], k: int) -> int:
+        Sum , cnt = 0, 0
+        hashMap ={0:1}
+        for num in nums:
+            Sum += num
+            target = Sum - k
+            if target in hashMap:
+                cnt += hashMap[target]
+            if Sum in hashMap:
+                hashMap[Sum] += 1
+            else:
+                hashMap[Sum] = 1
+        return cnt
+
           
