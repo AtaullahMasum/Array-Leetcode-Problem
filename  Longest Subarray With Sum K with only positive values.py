@@ -1,3 +1,29 @@
+#Brute Force Solution added
+"""
+    Time Complexity: O( N^2 ) 
+    Space Complexity: O(1)
+
+    where N is the size of array 'A'.
+"""
+
+
+def longestSubarrayWithSumK(a: [int], k: int) -> int:
+
+    n = len(a)
+    # maxLength is used to store the maximum
+    # length of a subarray whose sum = 'k'
+
+    maxLength = 0
+
+    
+    for i in range(n):
+        currentSum = 0
+        for j in range(i, n):
+            currentSum += a[j]
+            if currentSum == k:
+                maxLength = max(maxLength, j - i + 1)
+
+    return maxLength
 # Better Solution
 def longestSubarrayWithSumK(a: [int], k: int) -> int:
     # Write your code here
