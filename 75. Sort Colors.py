@@ -29,6 +29,7 @@ class Solution:
         for i in range(cnt2):
             nums[cnt0+cnt1+i] = 2
 # Optimal Solution Using Dutch National Flag
+# Time Complexity is O(n)
 class Solution:
     def sortColors(self, nums: List[int]) -> None:
         """
