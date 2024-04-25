@@ -20,6 +20,21 @@ class Solution:
         nums.sort()
         target =nums[n//2]
         return target
+# Better Approch using Sorting
+# Time Complexity is O(n)
+# Space Complexity is O(n//2)
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        hashMap = {}
+        n = len(nums)
+        for i in range(n):
+            if nums[i] in hashMap:
+                hashMap[nums[i]] += 1
+            else:
+                hashMap[nums[i]] = 1
+        for key, value in hashMap.items():
+            if value > n//2:
+                return key
 # Optimal Solution 
 # Time Complexity is O(n)
 # Space Complexcity is O(1)
