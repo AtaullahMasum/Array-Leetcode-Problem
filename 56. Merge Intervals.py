@@ -1,6 +1,6 @@
 # Brute Force Solution 
 # Time Complexity is : O(nlogn + 2n)
-# Space Complexity is : O(1)
+# Space Complexity is : O(n)
 class Solution:
     def merge(self, intervals: List[List[int]]) -> List[List[int]]:
         ans = []
@@ -18,8 +18,8 @@ class Solution:
             ans.append([start, end])
         return ans 
 # Optimal Solution 
-# Time COmplexity is O(n)
-# Space Complexity is O(no. of unique intervals)
+# Time COmplexity is O(nlog + n)
+# Space Complexity is O(n)
 class Solution:
     def merge(self, intervals: List[List[int]]) -> List[List[int]]:
         ans = []
